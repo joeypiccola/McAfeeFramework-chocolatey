@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+  
+    <id>mcafeeframework</id>
+    <title>McAfeeFramework (Install)</title>
+    <version>4.8.0.1500</version>
+    <authors>McAfee</authors>
+    <owners>Joey Piccola</owners>
+    <summary>Installs the McAfee Framework</summary>
+    <description>Installs the McAfee Framework from a generated frminst.exe artifact</description>
+
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>
