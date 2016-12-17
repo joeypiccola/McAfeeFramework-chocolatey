@@ -35,7 +35,7 @@ foreach ($Component in $Components)
             if ($componentInstallType -eq 'msi')
             {
                 $file       = ''
-                $silentArgs = "$($_.PSChildName) /qn /norestart /l*v c:\uninstall.log"
+                $silentArgs = "$($_.PSChildName) /qn /norestart"
             }
             write-host "Attempting uninstall of $componentFullName"
             Uninstall-ChocolateyPackage -PackageName $componentFullName -FileType $componentInstallType -SilentArgs "$silentArgs"  -ValidExitCodes $validExitCodes -File "$file"
