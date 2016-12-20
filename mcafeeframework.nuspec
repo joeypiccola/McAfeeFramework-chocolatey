@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
   
-    <id>mcafeeframework</id>
+    <id>McAfeeFramework</id>
     <title>McAfeeFramework (Install)</title>
     <version>4.8.0.1500</version>
     <authors>McAfee</authors>
