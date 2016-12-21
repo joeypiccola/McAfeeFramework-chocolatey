@@ -6,7 +6,7 @@
     <id>mcafeecramework</id>
     <title>McAfeeFramework (Install)</title>
     <version>4.8.0.1500</version>
-    <authors>McAfee</authors>
+    <authors>Intel Security Group</authors>
     <owners>Joey Piccola</owners>
     <summary>Installs the McAfee Framework</summary>
     <description>Installs the McAfee Framework from a generated frminst.exe artifact</description>
