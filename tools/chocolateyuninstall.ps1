@@ -16,16 +16,17 @@ foreach ($Component in $Components)
     $componentInstallType = $component.split('|')[1]
     $componentFullName = "$packageName\$componentDisplayName"
 
-    if ($componentDisplayName -eq 'McAfee SIEM Collector')
-    {
-        # This is no joke, sleeping anything less than 60 seconds will fail due to file locks
-        Write-Host "Sleeping 5min for things to settle before attempting to remove $componentFullName"
-        sleep -Seconds 300
-    }
-
     [array]$key = Get-UninstallRegistryKey -SoftwareName $componentDisplayName
     if ($key.count -eq 1)
     {
+        # only sleep if the SIEM Collector is installed
+        if ($componentDisplayName -eq 'McAfee SIEM Collector')
+        {
+            # This is no joke, sleeping anything less than 60 seconds will fail due to file locks
+            Write-Host "Sleeping 5min for things to settle before attempting to remove $componentFullName"
+            sleep -Seconds 300
+        }
+                
         $key | % {
             if ($componentInstallType -eq 'exe')
             {
